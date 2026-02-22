@@ -14,14 +14,12 @@ import {
   PenTool,
 } from "lucide-react"
 import { Link as ScrollLink } from "react-scroll"
-import CustomCursor from "@/components/custom-cursor"
-import Navbar from "@/components/navbar"
-import SocialIcon from "@/components/social-icon"
-import { Button } from "@/components/ui/button"
-import AboutMe from "@/components/about-me"
-import Loading from "@/components/loading"
-import InteractiveShapes from "@/components/InteractiveShapes"
-import AnimatedBoxes from "@/components/AnimatedBoxes"
+import CustomCursor from "../components/custom-cursor"
+import Navbar from "../components/navbar"
+import SocialIcon from "../components/social-icon"
+import AboutMe from "../components/about-me"
+import Loading from "../components/loading"
+import InteractiveShapes from "../components/InteractiveShapes"
 import {form} from "framer-motion/m";
 
 export default function Home() {
