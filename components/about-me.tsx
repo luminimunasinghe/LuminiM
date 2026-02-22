@@ -16,7 +16,7 @@ const timelineData = [
   {
     id: 2,
     company: "EngenuityAi",
-    role: "Software engineering Intern",
+    role: "Intern - Software Engineer",
     period: "2024 August - 2025 March",
     logo: "/company2.png",
     skills: ["React", "Next.js", "Tailwind CSS"],
@@ -66,9 +66,9 @@ export default function AboutMe() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
-              Code, Coffee & Me
+              About Me
             </span>
-            <span className="ml-2">☕💻</span>
+            <span className="ml-2"> 💻</span>
           </h2>
           {/* Profile Section */}
           <div className="flex flex-col md:flex-row-reverse items-center gap-10 mb-20">

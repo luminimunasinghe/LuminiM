@@ -22,6 +22,11 @@ import Loading from "../components/loading"
 import InteractiveShapes from "../components/InteractiveShapes"
 import {form} from "framer-motion/m";
 
+type EnhancedProjectCardProps = {
+    title: string
+    description?: string
+    tags?: string[]
+}
 export default function Home() {
   const form = useRef<HTMLFormElement>(null)
   const [toast, setToast] = useState<string | null>(null)
@@ -712,30 +717,32 @@ function ContactEmail() {
   )
 }
 
-function EnhancedProjectCard({title, description, tags}) {
-  return (
-      <motion.div
-          whileHover={{y: -10}}
-          className="p-6 rounded-2xl bg-gray-900/60 backdrop-blur-md border border-gray-800 hover:border-purple-500/40 transition-all duration-300 shadow-lg"
-      >
-        <h3 className="text-xl font-semibold text-white mb-4">
-          {title}
-        </h3>
 
-        <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-          {description}
-        </p>
 
-        <div className="flex flex-wrap gap-2">
-          {tags.map((tag) => (
-              <span
-                  key={tag}
-                  className="px-3 py-1 text-xs rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 text-gray-300"
-              >
-            {tag}
-          </span>
-          ))}
-        </div>
-      </motion.div>
-  )
+function EnhancedProjectCard({ title, description, tags = [] }: EnhancedProjectCardProps) {
+    return (
+        <motion.div
+            whileHover={{ y: -10 }}
+            className="p-6 rounded-2xl bg-gray-900/60 backdrop-blur-md border border-gray-800"
+        >
+            <h3 className="text-xl font-semibold text-white mb-4">{title}</h3>
+
+            {description && (
+                <p className="text-gray-400 text-sm mb-6 leading-relaxed">{description}</p>
+            )}
+
+            {tags.length > 0 && (
+                <div className="flex flex-wrap gap-2">
+                    {tags.map((tag) => (
+                        <span
+                            key={tag}
+                            className="px-3 py-1 text-xs rounded-full bg-purple-500/20 border border-purple-500/30 text-gray-300"
+                        >
+              {tag}
+            </span>
+                    ))}
+                </div>
+            )}
+        </motion.div>
+    )
 }
