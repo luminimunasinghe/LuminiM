@@ -3,7 +3,6 @@
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { Calendar, } from "lucide-react"
-
 const timelineData = [
   {
     id: 1,

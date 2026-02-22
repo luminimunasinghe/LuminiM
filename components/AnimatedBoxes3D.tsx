@@ -4,6 +4,8 @@ import { useRef, useMemo, useState } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { OrbitControls } from "@react-three/drei"
 import * as THREE from "three"
+import { Mesh } from "three";
+
 
 function Box({ position, color }: { position: [number, number, number]; color: THREE.Color }) {
   const mesh = useRef<THREE.Mesh>(null!)

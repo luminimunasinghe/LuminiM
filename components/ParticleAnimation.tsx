@@ -13,7 +13,7 @@ const ParticlesMaterial = new THREE.PointsMaterial({
 })
 
 function Particles({ count = 5000 }) {
-  const mesh = useRef<THREE.Points>(null!)
+  const mesh = useRef<THREE.InstancedMesh>(null!)
   const dummy = useMemo(() => new THREE.Object3D(), [])
 
   // Generate random positions, speeds and scales

@@ -4,6 +4,7 @@ import type React from "react"
 import emailjs from "@emailjs/browser"
 import { motion, useMotionValue, useTransform, animate } from "framer-motion"
 
+
 import {useState, useEffect, useRef} from "react"
 import {
   Github,
@@ -27,6 +28,7 @@ type EnhancedProjectCardProps = {
     description?: string
     tags?: string[]
 }
+import { Mesh } from "three";
 export default function Home() {
   const form = useRef<HTMLFormElement>(null)
   const [toast, setToast] = useState<string | null>(null)
